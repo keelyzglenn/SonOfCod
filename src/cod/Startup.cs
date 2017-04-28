@@ -67,7 +67,7 @@ namespace cod
                 Text = "Lorin will focus on the top strategic marketing initiatives for the company, including innovation, Go - to - Market strategy, and awareness for Pacific Seafood. Lorin will also manage the marketing services team which develops all packaging and sales materials.",
                 AdditionalInfo = "PORTLAND, Ore. -- April, 16. 2017",
                 ImagePath = "http://presidiosports.com/wp-content/uploads/2013/12/Crab-Fishing.jpg",
-                MarketingId = 1,
+                MarketingPageId = 1,
 
             };
             context.Posts.Add(autoPost1);
@@ -78,7 +78,7 @@ namespace cod
                 Text = "Trident Seafoods Corporation has approached Pacific Seafood Group about buying its surimi processing plant on Newport’s famed “working waterfront.” The Trident facility has been financially unprofitable since 2011.",
                 AdditionalInfo = "NEWPORT, Ore. – April 10, 2017",
                 ImagePath = "https://www.pacseafood.com/images/default-source/default-album/shutterstock_43587886.jpg",
-                MarketingId = 1,
+                MarketingPageId = 1,
 
             };
             context.Posts.Add(autoPost2);
@@ -89,7 +89,7 @@ namespace cod
                 Text = "Pacific Seafood Group, a vertically integrated seafood harvesting, processing and distribution company headquartered in Clackamas, Oregon, recently hired former Ventura County Commercial Fishermen’s Association President, Jon Gonzalez, to handle national fisheries policy advocacy for the company.",
                 AdditionalInfo = "Portland, Ore. – March 28, 2017",
                 ImagePath = "http://www.returnofkings.com/wp-content/uploads/2016/03/commercial-fisherman-on-boat.jpg",
-                MarketingId = 1,
+                MarketingPageId = 1,
 
             };
             context.Posts.Add(autoPost3);
@@ -98,9 +98,9 @@ namespace cod
             {
                 
                 Head = "Son of Cod Seafood",
-                HeadImage = "Pacific Seafood Group, a vertically integrated seafood harvesting, processing and distribution company headquartered in Clackamas, Oregon, recently hired former Ventura County Commercial Fishermen’s Association President, Jon Gonzalez, to handle national fisheries policy advocacy for the company.",
-                AboutTitle = "Our Story",
-                About = "",
+                HeadImage = "https://www.foxrc.com/frcwp/wp-content/uploads/2012/04/oyster-bar-925x522.jpg",
+                AboutTitle = "-Our Story-",
+                About = "We expect ourselves to do business right, to lead by example and to help out when we are needed. It is our company philosophy that guides our everyday decisions. It is good to be responsible, not just because it is the right thing to do, but because it also sets the bar for our company’s commitment to ensure that the communities in which we work and live will continue to prosper.",
                 FeatureOneTitle = "Serve it your Way.",
                 FeatureOneImage = "https://cdn.pixabay.com/photo/2016/02/19/11/32/oysters-1209767_960_720.jpg",
                 FeatureOneText = "We provide you with the best ingrediates, you cook it up how you like it! Check out our recipe book for news ways to intigrate the freshest ingrediates into your diet!",
@@ -120,7 +120,7 @@ namespace cod
 
 
             };
-            context.Posts.Add(marketingPage);
+            context.MarketingPage.Add(marketingPage);
 
             context.SaveChanges();
         }

@@ -124,9 +124,7 @@ namespace cod.Migrations
 
                     b.Property<string>("ImagePath");
 
-                    b.Property<int>("MarketingId");
-
-                    b.Property<int?>("MarketingPageId");
+                    b.Property<int>("MarketingPageId");
 
                     b.Property<string>("Text");
 
@@ -268,7 +266,8 @@ namespace cod.Migrations
                 {
                     b.HasOne("cod.Models.MarketingPage", "MarketingPage")
                         .WithMany("Posts")
-                        .HasForeignKey("MarketingPageId");
+                        .HasForeignKey("MarketingPageId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

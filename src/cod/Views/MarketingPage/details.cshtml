@@ -1,3 +1,104 @@
 ﻿
+@model cod.Models.MarketingPage
+
+
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+<img src="@Html.DisplayFor(model => model.HeadImage)" alt="Alternate Text" />
+</div>
+<hr />
+<div class="container">
+    <div class="row about">
+        <h3> @Html.DisplayFor(model => model.AboutTitle)</h3>
+        <p> @Html.DisplayFor(model => model.About)</p>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4 feature-text1">
+            <h3>@Html.DisplayFor(model => model.FeatureOneTitle)</h3>
+            <p> @Html.DisplayFor(model => model.FeatureOneText)</p>
+        </div>
+        <div class="col-md-6 feature-image">
+            <img src="@Html.DisplayFor(model => model.FeatureOneImage)" alt="Alternate Text" />
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-6 feature-image">
+            <img src="@Html.DisplayFor(model => model.FeatureTwoImage)" alt="Alternate Text" />
+        </div>
+        <div class="col-md-4 feature-text2">
+
+            <h3> @Html.DisplayFor(model => model.FeatureTwoTitle)</h3>
+            <p> @Html.DisplayFor(model => model.FeatureTwoText)</p>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="icon">
+                <img src="@Html.DisplayFor(model => model.ColumnOneImage)" alt="Alternate Text" />
+            </div>
+            <div class="text">
+                <h5> @Html.DisplayFor(model => model.ColumnOneTitle)</h5>
+                <p> @Html.DisplayFor(model => model.ColumnOneText)</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <img src="@Html.DisplayFor(model => model.ColumnTwoImage)" alt="Alternate Text" />
+            </div>
+            <div class="text">
+                <h5> @Html.DisplayFor(model => model.ColumnTwoTitle)</h5>
+                <p> @Html.DisplayFor(model => model.ColumnTwoText)</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <img src="@Html.DisplayFor(model => model.ColumnThreeImage)" alt="Alternate Text" />
+            </div>
+            <div class="text">
+                <h5> @Html.DisplayFor(model => model.ColumnThreeTitle)</h5>
+                <p> @Html.DisplayFor(model => model.ColumnThreeText)</p>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+
+    <h2> @Html.DisplayFor(model => model.PostTitle)</h2>
+
+    @foreach (var post in Model.Posts)
+    {
+        <div class=" col-md-4">
+        <h4>@post.Title</h4>
+        <h5>@post.Text</h5>
+        <p>@post.AdditionalInfo</p>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p>@Html.ActionLink("Edit", "Edit", new { id = post.PostId }) | @Html.ActionLink("Delete", "Delete", new { id = post.PostId })</p>
+            }
+
+        </div>
+
+    }
+
+    </div>
+
+
+</div>
+
 
           

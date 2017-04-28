@@ -14,13 +14,37 @@ namespace cod.Controllers
     {
 
         private SonOfCodSeafoodContext db = new SonOfCodSeafoodContext();
-
         public IActionResult Index()
         {
-            MarketingPage marketingPage = db.MarketingPage.Single();
-            return View(marketingPage);
+            return View(db.MarketingPage.ToList());
         }
- 
+
+        public IActionResult Details(int id)
+        {
+            var thisMarketingPage = db.MarketingPage.Include(marketingPages => marketingPages.Posts).FirstOrDefault(marketingPages => marketingPages.Id == id);
+            return View(thisMarketingPage);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+
+        public IActionResult Edit(int id)
+        {
+            var thisMarketingPage = db.MarketingPage.FirstOrDefault(marketingPages => marketingPages.Id == id);
+            return View(thisMarketingPage);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(MarketingPage marketingpage)
+        {
+            db.Entry(marketingpage).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

@@ -1,0 +1,20 @@
+﻿body {
+    text-align: center;
+}
+
+.icon img{
+    height: 100px;
+    width: 100px;
+}
+
+.feature-image img {
+    width: 500px;
+}
+
+.text {
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+}

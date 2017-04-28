@@ -8,8 +8,8 @@ using cod.Models;
 namespace cod.Migrations
 {
     [DbContext(typeof(SonOfCodSeafoodContext))]
-    [Migration("20170428213514_Data")]
-    partial class Data
+    [Migration("20170428234000_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -125,9 +125,7 @@ namespace cod.Migrations
 
                     b.Property<string>("ImagePath");
 
-                    b.Property<int>("MarketingId");
-
-                    b.Property<int?>("MarketingPageId");
+                    b.Property<int>("MarketingPageId");
 
                     b.Property<string>("Text");
 
@@ -269,7 +267,8 @@ namespace cod.Migrations
                 {
                     b.HasOne("cod.Models.MarketingPage", "MarketingPage")
                         .WithMany("Posts")
-                        .HasForeignKey("MarketingPageId");
+                        .HasForeignKey("MarketingPageId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

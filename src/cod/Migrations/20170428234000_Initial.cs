@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace cod.Migrations
 {
-    public partial class Data : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -159,8 +159,7 @@ namespace cod.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AdditionalInfo = table.Column<string>(nullable: true),
                     ImagePath = table.Column<string>(nullable: true),
-                    MarketingId = table.Column<int>(nullable: false),
-                    MarketingPageId = table.Column<int>(nullable: true),
+                    MarketingPageId = table.Column<int>(nullable: false),
                     Text = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true)
                 },
@@ -172,7 +171,7 @@ namespace cod.Migrations
                         column: x => x.MarketingPageId,
                         principalTable: "MarketingPages",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
