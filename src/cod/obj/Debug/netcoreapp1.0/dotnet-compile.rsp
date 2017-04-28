@@ -203,6 +203,7 @@
 --resource:"c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\obj\Debug\netcoreapp1.0\coddotnet-compile.deps.json",cod.deps.json
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Program.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Startup.cs
+c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Controllers\AccountController.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Controllers\HomeController.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185250_Initial.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185250_Initial.Designer.cs
@@ -212,3 +213,5 @@ c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\S
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\ApplicationUser.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\SonOfCodSeafoodContext.cs
 c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\Subscriber.cs
+c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\ViewModels\LoginViewModel.cs
+c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\ViewModels\RegisterViewModel.cs
