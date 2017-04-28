@@ -28,7 +28,6 @@ namespace cod
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<SonOfCodSeafoodContext>(opt => opt.UseInMemoryDatabase());
             services.AddMvc();
             services.AddEntityFramework()
                 .AddDbContext<SonOfCodSeafoodContext>(options =>

@@ -8,8 +8,8 @@ using cod.Models;
 namespace cod.Migrations
 {
     [DbContext(typeof(SonOfCodSeafoodContext))]
-    [Migration("20170428204611_MarketingPage")]
-    partial class MarketingPage
+    [Migration("20170428213514_Data")]
+    partial class Data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

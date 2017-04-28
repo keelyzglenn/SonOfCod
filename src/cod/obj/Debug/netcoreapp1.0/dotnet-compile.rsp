@@ -206,8 +206,8 @@ C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Startup.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\AccountController.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\HomeController.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\PostController.cs
-C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428204611_MarketingPage.cs
-C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428204611_MarketingPage.Designer.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428213514_Data.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428213514_Data.Designer.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\SonOfCodSeafoodContextModelSnapshot.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\ApplicationUser.cs
 C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\MarketingPage.cs
