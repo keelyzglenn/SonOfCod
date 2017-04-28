@@ -65,6 +65,24 @@ namespace cod.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("cod.Models.Post", b =>
+                {
+                    b.Property<int>("PostId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AdditionalInfo");
+
+                    b.Property<string>("ImagePath");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("PostId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("cod.Models.Subscriber", b =>
                 {
                     b.Property<int>("SubscriberId")

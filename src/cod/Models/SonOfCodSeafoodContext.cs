@@ -14,6 +14,8 @@ namespace cod.Models
         }
 
         public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCodSeafood;integrated security=True");

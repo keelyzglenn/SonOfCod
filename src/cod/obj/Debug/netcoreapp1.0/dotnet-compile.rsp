@@ -1,5 +1,5 @@
---temp-output:c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\obj\Debug\netcoreapp1.0\
---out:c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\bin\Debug\netcoreapp1.0\cod.dll
+--temp-output:C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\obj\Debug\netcoreapp1.0\
+--out:C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\bin\Debug\netcoreapp1.0\cod.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -200,18 +200,18 @@
 --reference:C:\Users\glenj392\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\glenj392\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\glenj392\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\obj\Debug\netcoreapp1.0\coddotnet-compile.deps.json",cod.deps.json
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Program.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Startup.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Controllers\AccountController.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Controllers\HomeController.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185250_Initial.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185250_Initial.Designer.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185613_I.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\20170428185613_I.Designer.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Migrations\SonOfCodSeafoodContextModelSnapshot.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\ApplicationUser.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\SonOfCodSeafoodContext.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\Models\Subscriber.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\ViewModels\LoginViewModel.cs
-c:\Users\glenj392\documents\visual studio 2015\Projects\cod\src\cod\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\obj\Debug\netcoreapp1.0\coddotnet-compile.deps.json",cod.deps.json
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Program.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Startup.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\AccountController.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\HomeController.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Controllers\PostController.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428200901_Initial.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\20170428200901_Initial.Designer.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Migrations\SonOfCodSeafoodContextModelSnapshot.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\ApplicationUser.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\Post.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\SonOfCodSeafoodContext.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\Models\Subscriber.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\ViewModels\LoginViewModel.cs
+C:\Users\glenj392\Documents\Visual Studio 2015\Projects\cod\src\cod\ViewModels\RegisterViewModel.cs

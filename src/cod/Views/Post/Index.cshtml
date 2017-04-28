@@ -1,0 +1,28 @@
+﻿@model IEnumerable<cod.Models.Post>
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Marketing</h2>
+<br />
+
+@foreach (var post in Model)
+{
+    <div>
+        <h4> @Html.DisplayFor(modelSubscriber => post.Title)</h4>
+        <h4> @Html.DisplayFor(modelSubscriber => post.Text)</h4>
+        <h4> @Html.DisplayFor(modelSubscriber => post.AdditionalInfo)</h4>
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Edit", "Create")
+        }
+    </div>
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+@Html.ActionLink("New", "Create")
+}

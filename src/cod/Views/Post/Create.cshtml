@@ -1,0 +1,26 @@
+﻿@model  cod.Models.Post
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Add new post</h4>
+@using (Html.BeginForm())
+{
+    <label>Title</label>
+    @Html.TextBoxFor(model => model.Title)
+
+    <label> Text</label>
+    @Html.TextBoxFor(model => model.Text)
+
+    <label>Additional Information</label>
+    @Html.TextBoxFor(model => model.AdditionalInfo)
+
+    <label>Image Url</label>
+    @Html.TextBoxFor(model => model.ImagePath)
+
+    <input type="submit" value="Begin Subscription" />
+}
+<p>@Html.ActionLink("Home", "Index")</p>
