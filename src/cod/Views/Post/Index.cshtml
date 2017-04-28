@@ -17,7 +17,7 @@
         <h4> @Html.DisplayFor(modelSubscriber => post.AdditionalInfo)</h4>
         @if (User.Identity.IsAuthenticated)
         {
-            @Html.ActionLink("Edit", "Create")
+            <p>@Html.ActionLink("Edit", "Edit", new { id = post.PostId }) | @Html.ActionLink("Delete", "Delete", new { id = post.PostId })</p>
         }
     </div>
 }

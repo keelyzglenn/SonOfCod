@@ -1,5 +1,29 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model cod.Models.Post
+
 @{
+    ViewData["Title"] = "Edit Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<h4>Edit</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PostId)
+
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Text)
+    @Html.EditorFor(model => model.Text)
+
+    <lable>Additional Information </lable>
+        @Html.EditorFor(model => model.AdditionalInfo)
+
+        <label>Image</label>
+        @Html.EditorFor(model => model.ImagePath)
+
+        <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Product List", "Index")</p>
