@@ -94,6 +94,34 @@ namespace cod
             };
             context.Posts.Add(autoPost3);
 
+            var marketingPage = new Models.MarketingPage
+            {
+                
+                Head = "Son of Cod Seafood",
+                HeadImage = "Pacific Seafood Group, a vertically integrated seafood harvesting, processing and distribution company headquartered in Clackamas, Oregon, recently hired former Ventura County Commercial Fishermen’s Association President, Jon Gonzalez, to handle national fisheries policy advocacy for the company.",
+                AboutTitle = "Our Story",
+                About = "",
+                FeatureOneTitle = "Serve it your Way.",
+                FeatureOneImage = "https://cdn.pixabay.com/photo/2016/02/19/11/32/oysters-1209767_960_720.jpg",
+                FeatureOneText = "We provide you with the best ingrediates, you cook it up how you like it! Check out our recipe book for news ways to intigrate the freshest ingrediates into your diet!",
+                FeatureTwoTitle = "Check Us Out at the Local Fish Market",
+                FeatureTwoImage = "https://cdn.pixabay.com/photo/2016/11/19/21/05/fish-1841183_960_720.jpg",
+                FeatureTwoText = "We are a local, hard working group of fishermen and chefs who love to share our hard work with you! Our products are always available at your local market.",
+                ColumnOneTitle = "Fish",
+                ColumnOneImage = "https://maxcdn.icons8.com/iOS7/PNG/512/Food/whole_fish-512.png",
+                ColumnOneText = "Always Fresh",
+                ColumnTwoTitle = "Local",
+                ColumnTwoImage = "https://d30y9cdsu7xlg0.cloudfront.net/png/79193-200.png",
+                ColumnTwoText = "Locally caught",
+                ColumnThreeTitle = "Jobs",
+                ColumnThreeImage = "https://d30y9cdsu7xlg0.cloudfront.net/png/2554-200.png",
+                ColumnThreeText = "Check out oppurtunities",
+                PostTitle = "News",
+
+
+            };
+            context.Posts.Add(marketingPage);
+
             context.SaveChanges();
         }
     }
