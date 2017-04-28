@@ -8,8 +8,8 @@ using cod.Models;
 namespace cod.Migrations
 {
     [DbContext(typeof(SonOfCodSeafoodContext))]
-    [Migration("20170428200901_Initial")]
-    partial class Initial
+    [Migration("20170428204611_MarketingPage")]
+    partial class MarketingPage
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -66,6 +66,56 @@ namespace cod.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("cod.Models.MarketingPage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("About");
+
+                    b.Property<string>("AboutTitle");
+
+                    b.Property<string>("ColumnOneImage");
+
+                    b.Property<string>("ColumnOneText");
+
+                    b.Property<string>("ColumnOneTitle");
+
+                    b.Property<string>("ColumnThreeImage");
+
+                    b.Property<string>("ColumnThreeText");
+
+                    b.Property<string>("ColumnThreeTitle");
+
+                    b.Property<string>("ColumnTwoImage");
+
+                    b.Property<string>("ColumnTwoText");
+
+                    b.Property<string>("ColumnTwoTitle");
+
+                    b.Property<string>("FeatureOneImage");
+
+                    b.Property<string>("FeatureOneText");
+
+                    b.Property<string>("FeatureOneTitle");
+
+                    b.Property<string>("FeatureTwoImage");
+
+                    b.Property<string>("FeatureTwoText");
+
+                    b.Property<string>("FeatureTwoTitle");
+
+                    b.Property<string>("Head");
+
+                    b.Property<string>("HeadImage");
+
+                    b.Property<string>("PostTitle");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MarketingPages");
+                });
+
             modelBuilder.Entity("cod.Models.Post", b =>
                 {
                     b.Property<int>("PostId")
@@ -75,11 +125,17 @@ namespace cod.Migrations
 
                     b.Property<string>("ImagePath");
 
+                    b.Property<int>("MarketingId");
+
+                    b.Property<int?>("MarketingPageId");
+
                     b.Property<string>("Text");
 
                     b.Property<string>("Title");
 
                     b.HasKey("PostId");
+
+                    b.HasIndex("MarketingPageId");
 
                     b.ToTable("Posts");
                 });
@@ -207,6 +263,13 @@ namespace cod.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("cod.Models.Post", b =>
+                {
+                    b.HasOne("cod.Models.MarketingPage", "MarketingPage")
+                        .WithMany("Posts")
+                        .HasForeignKey("MarketingPageId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

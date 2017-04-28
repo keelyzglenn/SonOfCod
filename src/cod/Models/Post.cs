@@ -17,6 +17,8 @@ namespace cod.Models
         public string Text { get; set; }
         public string AdditionalInfo { get; set; }
         public string ImagePath { get; set; }
+        public int MarketingId { get; set; }
+        public virtual MarketingPage MarketingPage { get; set; }
 
     }
 }

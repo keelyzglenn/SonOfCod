@@ -15,6 +15,7 @@ namespace cod.Models
 
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<MarketingPage> MarketingPage { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

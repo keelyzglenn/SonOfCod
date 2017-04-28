@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace cod.Migrations
 {
-    public partial class Initial : Migration
+    public partial class MarketingPage : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,19 +35,35 @@ namespace cod.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Posts",
+                name: "MarketingPages",
                 columns: table => new
                 {
-                    PostId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    AdditionalInfo = table.Column<string>(nullable: true),
-                    ImagePath = table.Column<string>(nullable: true),
-                    Text = table.Column<string>(nullable: true),
-                    Title = table.Column<string>(nullable: true)
+                    About = table.Column<string>(nullable: true),
+                    AboutTitle = table.Column<string>(nullable: true),
+                    ColumnOneImage = table.Column<string>(nullable: true),
+                    ColumnOneText = table.Column<string>(nullable: true),
+                    ColumnOneTitle = table.Column<string>(nullable: true),
+                    ColumnThreeImage = table.Column<string>(nullable: true),
+                    ColumnThreeText = table.Column<string>(nullable: true),
+                    ColumnThreeTitle = table.Column<string>(nullable: true),
+                    ColumnTwoImage = table.Column<string>(nullable: true),
+                    ColumnTwoText = table.Column<string>(nullable: true),
+                    ColumnTwoTitle = table.Column<string>(nullable: true),
+                    FeatureOneImage = table.Column<string>(nullable: true),
+                    FeatureOneText = table.Column<string>(nullable: true),
+                    FeatureOneTitle = table.Column<string>(nullable: true),
+                    FeatureTwoImage = table.Column<string>(nullable: true),
+                    FeatureTwoText = table.Column<string>(nullable: true),
+                    FeatureTwoTitle = table.Column<string>(nullable: true),
+                    Head = table.Column<string>(nullable: true),
+                    HeadImage = table.Column<string>(nullable: true),
+                    PostTitle = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Posts", x => x.PostId);
+                    table.PrimaryKey("PK_MarketingPages", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -136,6 +152,30 @@ namespace cod.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Posts",
+                columns: table => new
+                {
+                    PostId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    AdditionalInfo = table.Column<string>(nullable: true),
+                    ImagePath = table.Column<string>(nullable: true),
+                    MarketingId = table.Column<int>(nullable: false),
+                    MarketingPageId = table.Column<int>(nullable: true),
+                    Text = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Posts", x => x.PostId);
+                    table.ForeignKey(
+                        name: "FK_Posts_MarketingPages_MarketingPageId",
+                        column: x => x.MarketingPageId,
+                        principalTable: "MarketingPages",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -192,6 +232,11 @@ namespace cod.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Posts_MarketingPageId",
+                table: "Posts",
+                column: "MarketingPageId");
+
+            migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName");
@@ -244,6 +289,9 @@ namespace cod.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "MarketingPages");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
