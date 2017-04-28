@@ -1,0 +1,28 @@
+﻿@model IEnumerable<cod.Models.Subscriber>
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Newsletter</h2>
+<br />
+    @Html.ActionLink("Sign up for the newsletter", "Create")
+
+@if (User.Identity.IsAuthenticated)
+{
+    <br />
+    <ol>
+        @foreach (var subscriber in Model)
+        {
+            <li>
+                <h4>Subscriber Name: @Html.DisplayFor(modelSubscriber => subscriber.Name)</h4>
+            </li>
+        }
+    </ol>
+}
+else
+{
+    <h4>Latest feeds</h4>
+}

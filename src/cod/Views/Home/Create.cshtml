@@ -1,0 +1,26 @@
+﻿@model  cod.Models.Subscriber
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Subscribe to our newsletter</h4>
+@using (Html.BeginForm())
+{
+    <label>Name</label>
+    @Html.TextBoxFor(model => model.Name)
+
+    <label > Email</label>
+    @Html.TextBoxFor(model => model.Email)
+
+    <label> Favorite SeaFood</label>
+    @Html.TextBoxFor(model => model.FavoriteFood)
+
+    <label>Perferred Son of Cod Seafood Location</label>
+    @Html.TextBoxFor(model => model.Location)
+
+    <input type="submit" value="Begin Subscription" />
+}
+<p>@Html.ActionLink("Home", "Index")</p>
