@@ -1,0 +1,14 @@
+﻿
+@model cod.Models.MarketingPage
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul>
+    @foreach (var listPlace in Model)
+    {
+        <li>@Html.DisplayFor(modelPlace => listPlace.City) | @Html.ActionLink("Details", "Details", new { id = listPlace.PlaceId }) | @Html.ActionLink("Edit", "Edit", new { id = listPlace.PlaceId }) | @Html.ActionLink("Delete", "Delete", new { id = listPlace.PlaceId })</li>
+    }
+</ul>

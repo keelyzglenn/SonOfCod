@@ -63,30 +63,33 @@ namespace cod
         {
             var autoPost1 = new Models.Post
             {
-                Title = "Tes1",
-                Text = "test text",
-                AdditionalInfo = "text date",
-                ImagePath = "http://www.photographyblogger.net/wp-content/uploads/2013/07/16-fisherman.jpg",
+                Title = "PACIFIC SEAFOOD HIRES NEW DIRECTOR OF MARKETING",
+                Text = "Lorin will focus on the top strategic marketing initiatives for the company, including innovation, Go - to - Market strategy, and awareness for Pacific Seafood. Lorin will also manage the marketing services team which develops all packaging and sales materials.",
+                AdditionalInfo = "PORTLAND, Ore. -- April, 16. 2017",
+                ImagePath = "http://presidiosports.com/wp-content/uploads/2013/12/Crab-Fishing.jpg",
+                MarketingId = 1,
 
             };
             context.Posts.Add(autoPost1);
 
             var autoPost2 = new Models.Post
             {
-                Title = "Tes2",
-                Text = "test text",
-                AdditionalInfo = "text date",
-                ImagePath = "http://www.photographyblogger.net/wp-content/uploads/2013/07/16-fisherman.jpg",
+                Title = "PACIFIC SEAFOOD ASKED TO BUY TRIDENT SURIMI PLANT",
+                Text = "Trident Seafoods Corporation has approached Pacific Seafood Group about buying its surimi processing plant on Newport’s famed “working waterfront.” The Trident facility has been financially unprofitable since 2011.",
+                AdditionalInfo = "NEWPORT, Ore. – April 10, 2017",
+                ImagePath = "https://www.pacseafood.com/images/default-source/default-album/shutterstock_43587886.jpg",
+                MarketingId = 1,
 
             };
             context.Posts.Add(autoPost2);
 
             var autoPost3 = new Models.Post
             {
-                Title = "Tes3",
-                Text = "test text",
-                AdditionalInfo = "text date",
-                ImagePath = "http://www.photographyblogger.net/wp-content/uploads/2013/07/16-fisherman.jpg",
+                Title = "PACIFIC SEAFOOD HIRES FISHERIES POLICY ANALYST",
+                Text = "Pacific Seafood Group, a vertically integrated seafood harvesting, processing and distribution company headquartered in Clackamas, Oregon, recently hired former Ventura County Commercial Fishermen’s Association President, Jon Gonzalez, to handle national fisheries policy advocacy for the company.",
+                AdditionalInfo = "Portland, Ore. – March 28, 2017",
+                ImagePath = "http://www.returnofkings.com/wp-content/uploads/2016/03/commercial-fisherman-on-boat.jpg",
+                MarketingId = 1,
 
             };
             context.Posts.Add(autoPost3);

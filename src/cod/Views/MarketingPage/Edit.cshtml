@@ -1,0 +1,28 @@
+﻿
+@model cod.Models.MarketingPage
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this place: @Html.DisplayFor(model => model.City)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PlaceId)
+
+    @Html.LabelFor(model => model.City)
+    @Html.EditorFor(model => model.City)
+
+    @Html.LabelFor(model => model.Country)
+    @Html.EditorFor(model => model.Country)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
