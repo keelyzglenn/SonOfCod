@@ -8,7 +8,7 @@ using cod.Models;
 namespace cod.Migrations
 {
     [DbContext(typeof(SonOfCodSeafoodContext))]
-    [Migration("20170428234000_Initial")]
+    [Migration("20170501182757_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

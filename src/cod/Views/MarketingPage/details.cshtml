@@ -1,8 +1,9 @@
 ﻿
 @model cod.Models.MarketingPage
 
-
 @using System.Security.Claims
+
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -82,13 +83,16 @@
 
     @foreach (var post in Model.Posts)
     {
-        <div class=" col-md-4">
+        <div class="col-md-4">
+            <img src="post.ImagePath" alt="Alternate Text" />
         <h4>@post.Title</h4>
-        <h5>@post.Text</h5>
+        <p>@post.Text</p>
         <p>@post.AdditionalInfo</p>
+
+
             @if (User.Identity.IsAuthenticated)
             {
-                <p>@Html.ActionLink("Edit", "Edit", new { id = post.PostId }) | @Html.ActionLink("Delete", "Delete", new { id = post.PostId })</p>
+                <p>@Html.ActionLink("Edit", "Edit", "Post", new { id = post.PostId }) | @Html.ActionLink("Delete", "Delete", new { id = post.PostId })</p>
             }
 
         </div>

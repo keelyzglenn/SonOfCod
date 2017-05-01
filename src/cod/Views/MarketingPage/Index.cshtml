@@ -9,5 +9,6 @@
     @foreach (var listPlace in Model)
     {
         <li>@Html.ActionLink((string)listPlace.Head, "Details", new { id = listPlace.Id })</li>
+
     }
 </ul>

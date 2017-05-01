@@ -61,7 +61,7 @@ namespace cod
 
         private static void AddTestData(SonOfCodSeafoodContext context)
         {
-            var autoPost1 = new Models.Post
+            var post1 = new Models.Post
             {
                 Title = "PACIFIC SEAFOOD HIRES NEW DIRECTOR OF MARKETING",
                 Text = "Lorin will focus on the top strategic marketing initiatives for the company, including innovation, Go - to - Market strategy, and awareness for Pacific Seafood. Lorin will also manage the marketing services team which develops all packaging and sales materials.",
@@ -70,9 +70,9 @@ namespace cod
                 MarketingPageId = 1,
 
             };
-            context.Posts.Add(autoPost1);
+            context.Posts.Add(post1);
 
-            var autoPost2 = new Models.Post
+            var post2 = new Models.Post
             {
                 Title = "PACIFIC SEAFOOD ASKED TO BUY TRIDENT SURIMI PLANT",
                 Text = "Trident Seafoods Corporation has approached Pacific Seafood Group about buying its surimi processing plant on Newport’s famed “working waterfront.” The Trident facility has been financially unprofitable since 2011.",
@@ -81,9 +81,9 @@ namespace cod
                 MarketingPageId = 1,
 
             };
-            context.Posts.Add(autoPost2);
+            context.Posts.Add(post2);
 
-            var autoPost3 = new Models.Post
+            var post3 = new Models.Post
             {
                 Title = "PACIFIC SEAFOOD HIRES FISHERIES POLICY ANALYST",
                 Text = "Pacific Seafood Group, a vertically integrated seafood harvesting, processing and distribution company headquartered in Clackamas, Oregon, recently hired former Ventura County Commercial Fishermen’s Association President, Jon Gonzalez, to handle national fisheries policy advocacy for the company.",
@@ -92,7 +92,7 @@ namespace cod
                 MarketingPageId = 1,
 
             };
-            context.Posts.Add(autoPost3);
+            context.Posts.Add(post3);
 
             var marketingPage = new Models.MarketingPage
             {

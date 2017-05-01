@@ -8,20 +8,70 @@
 
 <h2>Edit</h2>
 <hr />
-<h4>Edit this place: @Html.DisplayFor(model => model.City)</h4>
+<h4>Edit this component: @Html.DisplayFor(model => model.Head)</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.PlaceId)
+    @Html.HiddenFor(model => model.Id)
 
-    @Html.LabelFor(model => model.City)
-    @Html.EditorFor(model => model.City)
+    @Html.LabelFor(model => model.Head)
+    @Html.EditorFor(model => model.Head)
 
-    @Html.LabelFor(model => model.Country)
-    @Html.EditorFor(model => model.Country)
+    @Html.LabelFor(model => model.HeadImage)
+    @Html.EditorFor(model => model.HeadImage)
 
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.AboutTitle)
+    @Html.EditorFor(model => model.AboutTitle)
+
+    @Html.LabelFor(model => model.About)
+    @Html.EditorFor(model => model.About)
+
+        @Html.LabelFor(model => model.FeatureOneTitle)
+    @Html.EditorFor(model => model.FeatureOneTitle)
+
+    @Html.LabelFor(model => model.FeatureOneImage)
+    @Html.EditorFor(model => model.FeatureOneImage)
+
+    @Html.LabelFor(model => model.FeatureOneText)
+    @Html.EditorFor(model => model.FeatureOneText)
+
+        @Html.LabelFor(model => model.FeatureTwoTitle)
+    @Html.EditorFor(model => model.FeatureTwoTitle)
+
+    @Html.LabelFor(model => model.FeatureTwoImage)
+    @Html.EditorFor(model => model.FeatureTwoImage)
+
+    @Html.LabelFor(model => model.FeatureTwoText)
+    @Html.EditorFor(model => model.FeatureTwoText)
+
+    @Html.LabelFor(model => model.ColumnOneTitle)
+    @Html.EditorFor(model => model.ColumnOneTitle)
+
+    @Html.LabelFor(model => model.ColumnOneImage)
+    @Html.EditorFor(model => model.ColumnOneImage)
+
+    @Html.LabelFor(model => model.ColumnOneText)
+    @Html.EditorFor(model => model.ColumnOneText)
+    
+     @Html.LabelFor(model => model.ColumnTwoTitle)
+    @Html.EditorFor(model => model.ColumnTwoTitle)
+
+    @Html.LabelFor(model => model.ColumnTwoImage)
+    @Html.EditorFor(model => model.ColumnTwoImage)
+
+    @Html.LabelFor(model => model.ColumnTwoText)
+    @Html.EditorFor(model => model.ColumnTwoText)
+
+             @Html.LabelFor(model => model.ColumnThreeTitle)
+    @Html.EditorFor(model => model.ColumnThreeTitle)
+
+    @Html.LabelFor(model => model.ColumnThreeImage)
+    @Html.EditorFor(model => model.ColumnThreeImage)
+
+    @Html.LabelFor(model => model.ColumnThreeText)
+    @Html.EditorFor(model => model.ColumnThreeText)
+
+
 
     <input type="submit" value="Save" />
 }

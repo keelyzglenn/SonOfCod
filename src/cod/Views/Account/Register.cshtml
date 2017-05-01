@@ -7,23 +7,63 @@
 
 @model RegisterViewModel
 
-<h2>Register a new user</h2>
-<hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
 
-    @Html.LabelFor(m => m.UserName)
-    @Html.TextBoxFor(m => m.UserName)
+    <div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Son of Cod Seafood Admin Registration</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center">
+                <form class="form-horizontal">
 
-    <p> Passwords requires at least six characters, a capital letter, a digit, and a special character</p>
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                               
+                                @Html.TextBoxFor(m => m.UserName)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                              
+                                @Html.TextBoxFor(m => m.Email)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <p class="cols-sm-2 control-label">Must be  six characters and contain a capital letter, a digit, and a special character</p>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+            
+                                @Html.PasswordFor(m => m.Password)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                            
+                                @Html.PasswordFor(m => m.ConfirmPassword)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <input type="submit" value="Register"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    @Html.LabelFor(m => m.Password)
-    @Html.PasswordFor(m => m.Password)
-
-    @Html.LabelFor(m => m.ConfirmPassword)
-    @Html.PasswordFor(m => m.ConfirmPassword)
-
-    <input type="submit" value="Register" />
 }
